@@ -24,7 +24,7 @@ public class Splash extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ss.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-250, -150, 1730, 990);
+        jLabel1.setBounds(-260, -150, 1730, 990);
 
         pack();
         setLocationRelativeTo(null);
