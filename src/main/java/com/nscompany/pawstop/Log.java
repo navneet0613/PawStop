@@ -51,7 +51,7 @@ public class Log extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(500, 540));
 
         jTextField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Login ID ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Username", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
 
         jButton1.setBackground(new java.awt.Color(102, 204, 255));
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N

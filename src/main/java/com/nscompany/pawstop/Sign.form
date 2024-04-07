@@ -141,7 +141,7 @@
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder title="Email">
+                <TitledBorder title="Username">
                   <Font PropertyName="font" name="Arial Black" size="12" style="1"/>
                   <Color PropertyName="color" blue="ff" green="cc" red="66" type="rgb"/>
                 </TitledBorder>
@@ -193,6 +193,7 @@
               <Font name="Arial" size="12" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&lt;html&gt;I agree to the &lt;B&gt;&lt;U style=&quot;color:rgb(52,139,227);&quot;&gt;terms and conditions&lt;/U&gt;&lt;/B&gt; stated in the agreement.&lt;/html&gt;"/>
+            <Property name="toolTipText" type="java.lang.String" value="Click to view agreement"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel5MouseClicked"/>

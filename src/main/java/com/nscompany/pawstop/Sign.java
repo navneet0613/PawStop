@@ -56,7 +56,7 @@ public class Sign extends javax.swing.JFrame {
 
         jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Name ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 205, 255))); // NOI18N
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Email", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
+        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Username", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
 
         jTextField3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Password", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
 
@@ -70,6 +70,7 @@ public class Sign extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel5.setText("<html>I agree to the <B><U style=\"color:rgb(52,139,227);\">terms and conditions</U></B> stated in the agreement.</html>");
+        jLabel5.setToolTipText("Click to view agreement");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
