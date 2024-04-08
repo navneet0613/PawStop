@@ -1,4 +1,4 @@
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
@@ -8,7 +8,7 @@ import java.awt.Color;
 
 
 public class Admin extends javax.swing.JFrame {
-    Color DefaultColor,ClickedColor,PressedColor;
+    Color DefaultColor,ClickedColor;
     public Admin() {
         initComponents();
         //the color code 
@@ -34,20 +34,21 @@ public class Admin extends javax.swing.JFrame {
 
         rep = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        app = new javax.swing.JLabel();
         pat = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        pp = new javax.swing.JLabel();
         pres = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        pre = new javax.swing.JLabel();
         list = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        listt = new javax.swing.JLabel();
         review = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        revieww = new javax.swing.JLabel();
+        pane = new javax.swing.JPanel();
+        desk = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
 
@@ -73,10 +74,15 @@ public class Admin extends javax.swing.JFrame {
         rep.add(jLabel7);
         jLabel7.setBounds(20, 20, 80, 60);
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        rep.add(jLabel2);
-        jLabel2.setBounds(0, 10, 110, 80);
+        app.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        app.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
+        app.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                appMouseClicked(evt);
+            }
+        });
+        rep.add(app);
+        app.setBounds(0, 10, 110, 80);
 
         getContentPane().add(rep);
         rep.setBounds(0, 130, 110, 100);
@@ -98,10 +104,15 @@ public class Admin extends javax.swing.JFrame {
         pat.add(jLabel9);
         jLabel9.setBounds(20, 20, 70, 60);
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        pat.add(jLabel3);
-        jLabel3.setBounds(0, 10, 110, 80);
+        pp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
+        pp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ppMouseClicked(evt);
+            }
+        });
+        pat.add(pp);
+        pp.setBounds(0, 10, 110, 80);
 
         getContentPane().add(pat);
         pat.setBounds(0, 230, 110, 100);
@@ -109,7 +120,7 @@ public class Admin extends javax.swing.JFrame {
 
         pres.setBackground(new java.awt.Color(102, 204, 255));
         pres.setForeground(new java.awt.Color(255, 255, 255));
-        pres.setToolTipText("New Priscription");
+        pres.setToolTipText("New Prescription");
         pres.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         pres.setMinimumSize(new java.awt.Dimension(90, 80));
         pres.setPreferredSize(new java.awt.Dimension(90, 80));
@@ -125,10 +136,15 @@ public class Admin extends javax.swing.JFrame {
         pres.add(jLabel8);
         jLabel8.setBounds(20, 20, 70, 64);
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        pres.add(jLabel4);
-        jLabel4.setBounds(0, 10, 110, 80);
+        pre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
+        pre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                preMouseClicked(evt);
+            }
+        });
+        pres.add(pre);
+        pre.setBounds(0, 10, 110, 80);
 
         getContentPane().add(pres);
         pres.setBounds(0, 330, 110, 100);
@@ -150,10 +166,15 @@ public class Admin extends javax.swing.JFrame {
         list.add(jLabel10);
         jLabel10.setBounds(20, 20, 80, 60);
 
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        list.add(jLabel5);
-        jLabel5.setBounds(0, 10, 110, 80);
+        listt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        listt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
+        listt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listtMouseClicked(evt);
+            }
+        });
+        list.add(listt);
+        listt.setBounds(0, 10, 110, 80);
 
         getContentPane().add(list);
         list.setBounds(0, 430, 110, 100);
@@ -176,29 +197,49 @@ public class Admin extends javax.swing.JFrame {
         review.add(jLabel11);
         jLabel11.setBounds(20, 20, 80, 60);
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        review.add(jLabel6);
-        jLabel6.setBounds(0, 10, 110, 80);
+        revieww.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        revieww.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
+        revieww.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reviewwMouseClicked(evt);
+            }
+        });
+        review.add(revieww);
+        revieww.setBounds(0, 10, 110, 80);
 
         getContentPane().add(review);
         review.setBounds(0, 530, 110, 100);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        pane.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        desk.setBackground(new java.awt.Color(255, 255, 255));
+        desk.setMaximumSize(new java.awt.Dimension(1250, 720));
+        desk.setMinimumSize(new java.awt.Dimension(1250, 720));
+
+        javax.swing.GroupLayout deskLayout = new javax.swing.GroupLayout(desk);
+        desk.setLayout(deskLayout);
+        deskLayout.setHorizontalGroup(
+            deskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1250, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        deskLayout.setVerticalGroup(
+            deskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 720, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(110, 10, 1250, 720);
+        javax.swing.GroupLayout paneLayout = new javax.swing.GroupLayout(pane);
+        pane.setLayout(paneLayout);
+        paneLayout.setHorizontalGroup(
+            paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        paneLayout.setVerticalGroup(
+            paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(desk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(pane);
+        pane.setBounds(110, 10, 1250, 720);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sss.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -230,10 +271,7 @@ public class Admin extends javax.swing.JFrame {
         list.setBackground(DefaultColor);
         review.setBackground(DefaultColor);
     }//GEN-LAST:event_repMouseMoved
-    private void repMouseClicked(java.awt.event.MouseEvent evt) {                                 
-        // TODO add your handling code here:
-    } 
-  
+     
     private void patMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_patMouseMoved
         // TODO add your handling code here:
         rep.setBackground(DefaultColor);
@@ -242,10 +280,7 @@ public class Admin extends javax.swing.JFrame {
         list.setBackground(DefaultColor);
         review.setBackground(DefaultColor);
     }//GEN-LAST:event_patMouseMoved
-    
-    private void patMouseClicked(java.awt.event.MouseEvent evt) {        
-    } 
-    
+     
     
     private void presMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_presMouseMoved
         // TODO add your handling code here:
@@ -255,8 +290,7 @@ public class Admin extends javax.swing.JFrame {
         list.setBackground(DefaultColor);
         review.setBackground(DefaultColor);
     }//GEN-LAST:event_presMouseMoved
-    private void presMouseClicked(java.awt.event.MouseEvent evt) { 
-    }
+   
     
     private void listMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listMouseMoved
         // TODO add your handling code here:
@@ -266,8 +300,7 @@ public class Admin extends javax.swing.JFrame {
         list.setBackground(ClickedColor);
         review.setBackground(DefaultColor);
     }//GEN-LAST:event_listMouseMoved
-    private void listMouseClicked(java.awt.event.MouseEvent evt) {
-       }
+  
     private void reviewMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewMouseMoved
         // TODO add your handling code here:
        rep.setBackground(DefaultColor);
@@ -276,8 +309,37 @@ public class Admin extends javax.swing.JFrame {
        list.setBackground(DefaultColor);
        review.setBackground(ClickedColor);        
     }//GEN-LAST:event_reviewMouseMoved
-    private void reviewMouseClicked(java.awt.event.MouseEvent evt) {                                  
-        }       
+
+    private void appMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appMouseClicked
+        Appointment_a a=new Appointment_a();
+        desk.removeAll();
+        desk.add(a).setVisible(true);
+    }//GEN-LAST:event_appMouseClicked
+
+    private void ppMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppMouseClicked
+        Newpatient_a n=new Newpatient_a();
+        desk.removeAll();
+        desk.add(n).setVisible(true);
+    }//GEN-LAST:event_ppMouseClicked
+
+    private void preMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_preMouseClicked
+        Newpriscription_a p=new Newpriscription_a();
+        desk.removeAll();
+        desk.add(p).setVisible(true);
+    }//GEN-LAST:event_preMouseClicked
+
+    private void listtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listtMouseClicked
+        list_a l=new list_a();
+        desk.removeAll();
+        desk.add(l).setVisible(true);
+    }//GEN-LAST:event_listtMouseClicked
+
+    private void reviewwMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewwMouseClicked
+        Review_a v=new Review_a();
+        desk.removeAll();
+        desk.add(v).setVisible(true);
+    }//GEN-LAST:event_reviewwMouseClicked
+     
     /**
      * @param args the command line arguments
      */
@@ -314,23 +376,24 @@ public class Admin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel app;
+    private javax.swing.JDesktopPane desk;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel list;
+    private javax.swing.JLabel listt;
+    private javax.swing.JPanel pane;
     private javax.swing.JPanel pat;
+    private javax.swing.JLabel pp;
+    private javax.swing.JLabel pre;
     private javax.swing.JPanel pres;
     private javax.swing.JPanel rep;
     private javax.swing.JPanel review;
+    private javax.swing.JLabel revieww;
     // End of variables declaration//GEN-END:variables
 }
