@@ -47,14 +47,13 @@ public class Admin extends javax.swing.JFrame {
         review = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         revieww = new javax.swing.JLabel();
-        pane = new javax.swing.JPanel();
         desk = new javax.swing.JDesktopPane();
+        pane = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1380, 775));
-        setPreferredSize(new java.awt.Dimension(1380, 775));
         getContentPane().setLayout(null);
 
         rep.setBackground(new java.awt.Color(102, 204, 255));
@@ -67,25 +66,26 @@ public class Admin extends javax.swing.JFrame {
                 repMouseMoved(evt);
             }
         });
+        rep.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                repMouseClicked(evt);
+            }
+        });
         rep.setLayout(null);
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/medical-appointment.png"))); // NOI18N
         rep.add(jLabel7);
-        jLabel7.setBounds(20, 20, 80, 60);
+        jLabel7.setBounds(60, 10, 80, 60);
 
         app.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         app.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        app.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                appMouseClicked(evt);
-            }
-        });
+        app.setToolTipText("Schedule an Appointment ");
         rep.add(app);
-        app.setBounds(0, 10, 110, 80);
+        app.setBounds(40, 0, 110, 80);
 
         getContentPane().add(rep);
-        rep.setBounds(0, 130, 110, 100);
+        rep.setBounds(0, 150, 180, 80);
 
         pat.setBackground(new java.awt.Color(102, 204, 255));
         pat.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,25 +97,26 @@ public class Admin extends javax.swing.JFrame {
                 patMouseMoved(evt);
             }
         });
+        pat.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                patMouseClicked(evt);
+            }
+        });
         pat.setLayout(null);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edit-info.png"))); // NOI18N
         pat.add(jLabel9);
-        jLabel9.setBounds(20, 20, 70, 60);
+        jLabel9.setBounds(60, 10, 70, 60);
 
         pp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        pp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ppMouseClicked(evt);
-            }
-        });
+        pp.setToolTipText("Add a new Patient");
         pat.add(pp);
-        pp.setBounds(0, 10, 110, 80);
+        pp.setBounds(40, 0, 110, 80);
 
         getContentPane().add(pat);
-        pat.setBounds(0, 230, 110, 100);
+        pat.setBounds(0, 230, 180, 80);
         pat.getAccessibleContext().setAccessibleName("");
 
         pres.setBackground(new java.awt.Color(102, 204, 255));
@@ -129,25 +130,26 @@ public class Admin extends javax.swing.JFrame {
                 presMouseMoved(evt);
             }
         });
+        pres.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                presMouseClicked(evt);
+            }
+        });
         pres.setLayout(null);
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pencil.png"))); // NOI18N
         pres.add(jLabel8);
-        jLabel8.setBounds(20, 20, 70, 64);
+        jLabel8.setBounds(60, 10, 70, 64);
 
         pre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         pre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        pre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                preMouseClicked(evt);
-            }
-        });
+        pre.setToolTipText("New Prescription");
         pres.add(pre);
-        pre.setBounds(0, 10, 110, 80);
+        pre.setBounds(40, 0, 110, 80);
 
         getContentPane().add(pres);
-        pres.setBounds(0, 330, 110, 100);
+        pres.setBounds(0, 310, 180, 80);
 
         list.setBackground(new java.awt.Color(102, 204, 255));
         list.setForeground(new java.awt.Color(102, 204, 255));
@@ -159,25 +161,26 @@ public class Admin extends javax.swing.JFrame {
                 listMouseMoved(evt);
             }
         });
+        list.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listMouseClicked(evt);
+            }
+        });
         list.setLayout(null);
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/to-do-list.png"))); // NOI18N
         list.add(jLabel10);
-        jLabel10.setBounds(20, 20, 80, 60);
+        jLabel10.setBounds(60, 10, 80, 60);
 
         listt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         listt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        listt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                listtMouseClicked(evt);
-            }
-        });
+        listt.setToolTipText("List of Patients ");
         list.add(listt);
-        listt.setBounds(0, 10, 110, 80);
+        listt.setBounds(40, 0, 110, 80);
 
         getContentPane().add(list);
-        list.setBounds(0, 430, 110, 100);
+        list.setBounds(0, 390, 180, 80);
 
         review.setBackground(new java.awt.Color(102, 204, 255));
         review.setForeground(new java.awt.Color(102, 204, 255));
@@ -190,58 +193,58 @@ public class Admin extends javax.swing.JFrame {
                 reviewMouseMoved(evt);
             }
         });
+        review.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reviewMouseClicked(evt);
+            }
+        });
         review.setLayout(null);
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checked.png"))); // NOI18N
+        jLabel11.setToolTipText("Review Patient Records");
         review.add(jLabel11);
-        jLabel11.setBounds(20, 20, 80, 60);
+        jLabel11.setBounds(60, 10, 80, 60);
 
         revieww.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         revieww.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Rectangle 1 (1).png"))); // NOI18N
-        revieww.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                reviewwMouseClicked(evt);
-            }
-        });
         review.add(revieww);
-        revieww.setBounds(0, 10, 110, 80);
+        revieww.setBounds(40, 0, 110, 80);
 
         getContentPane().add(review);
-        review.setBounds(0, 530, 110, 100);
+        review.setBounds(0, 470, 180, 80);
 
         pane.setBackground(new java.awt.Color(255, 255, 255));
-
-        desk.setBackground(new java.awt.Color(255, 255, 255));
-        desk.setMaximumSize(new java.awt.Dimension(1250, 720));
-        desk.setMinimumSize(new java.awt.Dimension(1250, 720));
-
-        javax.swing.GroupLayout deskLayout = new javax.swing.GroupLayout(desk);
-        desk.setLayout(deskLayout);
-        deskLayout.setHorizontalGroup(
-            deskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1250, Short.MAX_VALUE)
-        );
-        deskLayout.setVerticalGroup(
-            deskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout paneLayout = new javax.swing.GroupLayout(pane);
         pane.setLayout(paneLayout);
         paneLayout.setHorizontalGroup(
             paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 1200, Short.MAX_VALUE)
         );
         paneLayout.setVerticalGroup(
             paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desk, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGap(0, 770, Short.MAX_VALUE)
         );
 
-        getContentPane().add(pane);
-        pane.setBounds(110, 10, 1250, 720);
+        desk.setLayer(pane, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sss.png"))); // NOI18N
+        javax.swing.GroupLayout deskLayout = new javax.swing.GroupLayout(desk);
+        desk.setLayout(deskLayout);
+        deskLayout.setHorizontalGroup(
+            deskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        deskLayout.setVerticalGroup(
+            deskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(desk);
+        desk.setBounds(180, 10, 1200, 770);
+
+        jLabel1.setBackground(new java.awt.Color(52, 139, 227));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ss.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
         jLabel1.setBounds(-90, 0, 2000, 1080);
 
@@ -310,35 +313,35 @@ public class Admin extends javax.swing.JFrame {
        review.setBackground(ClickedColor);        
     }//GEN-LAST:event_reviewMouseMoved
 
-    private void appMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appMouseClicked
-        Appointment_a a=new Appointment_a();
-        desk.removeAll();
-        desk.add(a).setVisible(true);
-    }//GEN-LAST:event_appMouseClicked
+    private void repMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_repMouseClicked
+      Appointment_a a=new Appointment_a();
+      desk.removeAll();
+      desk.add(a).setVisible(true);
+    }//GEN-LAST:event_repMouseClicked
 
-    private void ppMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ppMouseClicked
+    private void patMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_patMouseClicked
         Newpatient_a n=new Newpatient_a();
         desk.removeAll();
         desk.add(n).setVisible(true);
-    }//GEN-LAST:event_ppMouseClicked
+    }//GEN-LAST:event_patMouseClicked
 
-    private void preMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_preMouseClicked
+    private void presMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_presMouseClicked
         Newpriscription_a p=new Newpriscription_a();
         desk.removeAll();
         desk.add(p).setVisible(true);
-    }//GEN-LAST:event_preMouseClicked
+    }//GEN-LAST:event_presMouseClicked
 
-    private void listtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listtMouseClicked
+    private void listMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listMouseClicked
         list_a l=new list_a();
         desk.removeAll();
         desk.add(l).setVisible(true);
-    }//GEN-LAST:event_listtMouseClicked
+    }//GEN-LAST:event_listMouseClicked
 
-    private void reviewwMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewwMouseClicked
-        Review_a v=new Review_a();
+    private void reviewMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reviewMouseClicked
+         Review_a v=new Review_a();
         desk.removeAll();
         desk.add(v).setVisible(true);
-    }//GEN-LAST:event_reviewwMouseClicked
+    }//GEN-LAST:event_reviewMouseClicked
      
     /**
      * @param args the command line arguments

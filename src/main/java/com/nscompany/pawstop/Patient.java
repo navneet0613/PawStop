@@ -35,7 +35,6 @@ public class Patient extends javax.swing.JFrame {
         doc = new javax.swing.JLabel();
         cont = new javax.swing.JLabel();
         prof = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -181,10 +180,6 @@ public class Patient extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(100, 60, 1170, 620);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(jPanel2);
-        jPanel2.setBounds(90, 50, 1190, 640);
-
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sss.png"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(1380, 775));
         jLabel2.setMinimumSize(new java.awt.Dimension(1380, 775));
@@ -279,7 +274,6 @@ public class Patient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel prescrip;
     private javax.swing.JLabel prof;
     // End of variables declaration//GEN-END:variables
