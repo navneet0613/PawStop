@@ -26,19 +26,97 @@ public class Contact_p extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1380, 775));
         setMinimumSize(new java.awt.Dimension(1380, 775));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1380, 775));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1380, 775));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1380, 775));
+        jPanel1.setLayout(null);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setText("CONTACT US ");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(600, 70, 160, 50);
+
+        jLabel4.setText("Address");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(450, 200, 60, 16);
+
+        jLabel5.setText("Phone");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(450, 300, 34, 16);
+
+        jLabel6.setText("Email");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(460, 410, 29, 16);
+
+        jLabel7.setText("Social Media ");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(450, 500, 70, 16);
+
+        jLabel8.setText("Business hours");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(450, 600, 78, 16);
+
+        jLabel9.setText("123 Main Street City, State, Zip Code");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(580, 190, 200, 16);
+
+        jLabel10.setText("(+91)7686376849");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(580, 300, 88, 16);
+
+        jLabel11.setText("pawstop@gmail.com");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(590, 410, 113, 16);
+
+        jLabel12.setText("[Facebook icon/link] [Twitter icon/link] [Instagram icon/link] [LinkedIn icon/link] [YouTube icon/link]");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(590, 490, 534, 16);
+
+        jLabel13.setText("Monday - Friday: 9:00 AM - 5:00 PM Saturday: 9:00 AM - 1:00 PM Sunday: Closed");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(590, 600, 424, 16);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(30, 30, 1051, 320);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(299, 391, 1051, 320);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1380, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 775, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -81,5 +159,19 @@ public class Contact_p extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

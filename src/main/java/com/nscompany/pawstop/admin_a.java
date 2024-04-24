@@ -19,8 +19,8 @@ public class admin_a extends javax.swing.JFrame {
         DefaultColor= new Color(255,255,255);
         ClickedColor=new Color(220,220,220);
         
-        
-           app.setBackground(DefaultColor);           
+            home.setBackground(DefaultColor);
+            app.setBackground(DefaultColor);           
             npat.setBackground(DefaultColor);
             pres.setBackground(DefaultColor);
             list.setBackground(DefaultColor); 
@@ -36,8 +36,8 @@ public class admin_a extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jPanel4 = new javax.swing.JPanel();
+        desk = new javax.swing.JDesktopPane();
+        pane = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         app = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -49,45 +49,46 @@ public class admin_a extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         rev = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        home = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1380, 775));
         setMinimumSize(new java.awt.Dimension(1380, 775));
         getContentPane().setLayout(null);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        pane.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1140, Short.MAX_VALUE)
+        javax.swing.GroupLayout paneLayout = new javax.swing.GroupLayout(pane);
+        pane.setLayout(paneLayout);
+        paneLayout.setHorizontalGroup(
+            paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1150, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        paneLayout.setVerticalGroup(
+            paneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 734, Short.MAX_VALUE)
         );
 
-        jDesktopPane1.setLayer(jPanel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        desk.setLayer(pane, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout deskLayout = new javax.swing.GroupLayout(desk);
+        desk.setLayout(deskLayout);
+        deskLayout.setHorizontalGroup(
+            deskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        deskLayout.setVerticalGroup(
+            deskLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, deskLayout.createSequentialGroup()
+                .addComponent(pane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        getContentPane().add(jDesktopPane1);
-        jDesktopPane1.setBounds(200, 40, 1140, 740);
+        getContentPane().add(desk);
+        desk.setBounds(200, 40, 1150, 740);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
@@ -99,6 +100,11 @@ public class admin_a extends javax.swing.JFrame {
         app.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 appMouseMoved(evt);
+            }
+        });
+        app.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                appMouseClicked(evt);
             }
         });
 
@@ -125,13 +131,18 @@ public class admin_a extends javax.swing.JFrame {
         );
 
         jPanel2.add(app);
-        app.setBounds(0, 20, 200, 50);
+        app.setBounds(0, 90, 200, 50);
 
         list.setBackground(new java.awt.Color(255, 255, 255));
         list.setToolTipText("View  list of patients");
         list.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 listMouseMoved(evt);
+            }
+        });
+        list.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listMouseClicked(evt);
             }
         });
 
@@ -158,13 +169,18 @@ public class admin_a extends javax.swing.JFrame {
         );
 
         jPanel2.add(list);
-        list.setBounds(0, 230, 200, 50);
+        list.setBounds(0, 300, 200, 50);
 
         npat.setBackground(new java.awt.Color(255, 255, 255));
         npat.setToolTipText("Add a new patient ");
         npat.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 npatMouseMoved(evt);
+            }
+        });
+        npat.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                npatMouseClicked(evt);
             }
         });
 
@@ -191,13 +207,18 @@ public class admin_a extends javax.swing.JFrame {
         );
 
         jPanel2.add(npat);
-        npat.setBounds(0, 90, 200, 50);
+        npat.setBounds(0, 160, 200, 50);
 
         pres.setBackground(new java.awt.Color(255, 255, 255));
         pres.setToolTipText("Add new prescription");
         pres.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 presMouseMoved(evt);
+            }
+        });
+        pres.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                presMouseClicked(evt);
             }
         });
 
@@ -224,13 +245,18 @@ public class admin_a extends javax.swing.JFrame {
         );
 
         jPanel2.add(pres);
-        pres.setBounds(0, 160, 200, 50);
+        pres.setBounds(0, 230, 200, 50);
 
         rev.setBackground(new java.awt.Color(255, 255, 255));
         rev.setToolTipText("Review patients' records");
         rev.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
                 revMouseMoved(evt);
+            }
+        });
+        rev.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                revMouseClicked(evt);
             }
         });
 
@@ -257,43 +283,79 @@ public class admin_a extends javax.swing.JFrame {
         );
 
         jPanel2.add(rev);
-        rev.setBounds(0, 300, 200, 50);
+        rev.setBounds(0, 370, 200, 50);
+
+        home.setBackground(new java.awt.Color(255, 255, 255));
+        home.setToolTipText("Visit home");
+        home.setMinimumSize(new java.awt.Dimension(200, 50));
+        home.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                homeMouseMoved(evt);
+            }
+        });
+        home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeMouseClicked(evt);
+            }
+        });
+
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/calendar-clock.png"))); // NOI18N
+        jLabel9.setText("Home");
+        jLabel9.setToolTipText("Visit Home");
+
+        javax.swing.GroupLayout homeLayout = new javax.swing.GroupLayout(home);
+        home.setLayout(homeLayout);
+        homeLayout.setHorizontalGroup(
+            homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homeLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel9)
+                .addContainerGap(88, Short.MAX_VALUE))
+        );
+        homeLayout.setVerticalGroup(
+            homeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(homeLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        jPanel2.add(home);
+        home.setBounds(0, 20, 200, 50);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(0, 210, 210, 570);
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("<html><u>LOG OUT</u></html>");
+        jLabel7.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+        });
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(1220, 0, 70, 30);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 570, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel3);
-        jPanel3.setBounds(1340, 210, 40, 570);
-
-        jButton1.setBackground(new java.awt.Color(50, 140, 255));
-        jButton1.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("LOG OUT");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(1240, 0, 100, 40);
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/close.png"))); // NOI18N
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(1190, 0, 32, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sss.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-300, 0, 1710, 210);
+        jLabel1.setBounds(-100, 0, 1810, 780);
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void appMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appMouseMoved
+        home.setBackground(DefaultColor);
         app.setBackground(ClickedColor);
         npat.setBackground(DefaultColor);
         pres.setBackground(DefaultColor);
@@ -302,6 +364,7 @@ public class admin_a extends javax.swing.JFrame {
     }//GEN-LAST:event_appMouseMoved
 
     private void npatMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_npatMouseMoved
+        home.setBackground(DefaultColor);
         app.setBackground(DefaultColor);
         npat.setBackground(ClickedColor);
         pres.setBackground(DefaultColor);
@@ -310,6 +373,7 @@ public class admin_a extends javax.swing.JFrame {
     }//GEN-LAST:event_npatMouseMoved
 
     private void presMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_presMouseMoved
+       home.setBackground(DefaultColor);
         app.setBackground(DefaultColor);
         npat.setBackground(DefaultColor);
         pres.setBackground(ClickedColor);
@@ -318,6 +382,7 @@ public class admin_a extends javax.swing.JFrame {
     }//GEN-LAST:event_presMouseMoved
 
     private void listMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listMouseMoved
+        home.setBackground(DefaultColor);
         app.setBackground(DefaultColor);
         npat.setBackground(DefaultColor);
         pres.setBackground(DefaultColor);
@@ -326,12 +391,62 @@ public class admin_a extends javax.swing.JFrame {
     }//GEN-LAST:event_listMouseMoved
 
     private void revMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_revMouseMoved
+        home.setBackground(DefaultColor);
         app.setBackground(DefaultColor);
         npat.setBackground(DefaultColor);
         pres.setBackground(DefaultColor);
         list.setBackground(DefaultColor); 
         rev.setBackground(ClickedColor);
     }//GEN-LAST:event_revMouseMoved
+
+    private void appMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appMouseClicked
+      Appointment_a a=new Appointment_a();
+      desk.removeAll();
+      desk.add(a).setVisible(true);
+    }//GEN-LAST:event_appMouseClicked
+
+    private void npatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_npatMouseClicked
+        Newpatient_a n=new Newpatient_a();
+        desk.removeAll();
+        desk.add(n).setVisible(true);
+    }//GEN-LAST:event_npatMouseClicked
+
+    private void presMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_presMouseClicked
+         Newpriscription_a p=new Newpriscription_a();
+        desk.removeAll();
+        desk.add(p).setVisible(true);
+    }//GEN-LAST:event_presMouseClicked
+
+    private void listMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listMouseClicked
+         list_a l=new list_a();
+        desk.removeAll();
+        desk.add(l).setVisible(true);
+    }//GEN-LAST:event_listMouseClicked
+
+    private void revMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_revMouseClicked
+        Review_a v=new Review_a();
+        desk.removeAll();
+        desk.add(v).setVisible(true);                                   
+    }//GEN-LAST:event_revMouseClicked
+
+    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
+      Log l=new Log();
+      this.dispose();
+      l.setVisible(true);
+    }//GEN-LAST:event_jLabel7MousePressed
+
+    private void homeMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseMoved
+       home.setBackground(ClickedColor);
+        app.setBackground(DefaultColor);
+        npat.setBackground(DefaultColor);
+        pres.setBackground(DefaultColor);
+        list.setBackground(DefaultColor); 
+        rev.setBackground(DefaultColor);
+    }//GEN-LAST:event_homeMouseMoved
+
+    private void homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseClicked
+             
+    }//GEN-LAST:event_homeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -370,19 +485,21 @@ public class admin_a extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel app;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JDesktopPane desk;
+    private javax.swing.JPanel home;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel list;
     private javax.swing.JPanel npat;
+    private javax.swing.JPanel pane;
     private javax.swing.JPanel pres;
     private javax.swing.JPanel rev;
     // End of variables declaration//GEN-END:variables

@@ -1,15 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.nscompany.pawstop;
 
-/**
- *
- * @author Lenovo
- */
-public class Details_p extends javax.swing.JFrame {
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
+public class Details_p extends javax.swing.JFrame {
+ConnectionClass cn1=new ConnectionClass.getInstance();
     /**
      * Creates new form Details_p
      */
@@ -26,24 +23,208 @@ public class Details_p extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        name = new javax.swing.JTextField();
+        spe = new javax.swing.JTextField();
+        sym = new javax.swing.JTextField();
+        gender = new javax.swing.JTextField();
+        breed = new javax.swing.JTextField();
+        premed = new javax.swing.JTextField();
+        dob = new com.toedter.calendar.JDateChooser();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        oname = new javax.swing.JTextField();
+        phoneno = new javax.swing.JTextField();
+        mail = new javax.swing.JTextField();
+        add = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1380, 775));
         setMinimumSize(new java.awt.Dimension(1380, 775));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1380, 775));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1380, 775));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1380, 775));
+        jPanel1.setLayout(null);
+
+        jLabel3.setText("Pet details");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(1140, 110, 54, 16);
+
+        jLabel4.setText("Name");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(210, 80, 32, 16);
+
+        jLabel5.setText("Species ");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(210, 130, 50, 16);
+
+        jLabel6.setText("Date of Birth");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(200, 190, 80, 16);
+
+        jLabel7.setText("Symptoms/ Diseases");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(180, 240, 120, 20);
+
+        jLabel8.setText("Gender");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(620, 80, 50, 16);
+
+        jLabel9.setText("Breed");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(620, 140, 30, 16);
+
+        jLabel10.setText("previous medications");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(590, 190, 120, 20);
+        jPanel1.add(name);
+        name.setBounds(310, 80, 64, 22);
+        jPanel1.add(spe);
+        spe.setBounds(310, 130, 64, 22);
+        jPanel1.add(sym);
+        sym.setBounds(320, 240, 64, 22);
+        jPanel1.add(gender);
+        gender.setBounds(730, 80, 64, 22);
+        jPanel1.add(breed);
+        breed.setBounds(730, 140, 64, 22);
+        jPanel1.add(premed);
+        premed.setBounds(740, 200, 64, 22);
+        jPanel1.add(dob);
+        dob.setBounds(310, 190, 96, 22);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(30, 30, 1051, 320);
+
+        jLabel12.setText("Owner Details ");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(110, 480, 90, 16);
+        jPanel1.add(oname);
+        oname.setBounds(790, 430, 64, 22);
+        jPanel1.add(phoneno);
+        phoneno.setBounds(790, 500, 64, 22);
+        jPanel1.add(mail);
+        mail.setBounds(800, 570, 64, 22);
+        jPanel1.add(add);
+        add.setBounds(800, 630, 64, 22);
+
+        jButton1.setText("SUBMIT");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(1040, 660, 150, 30);
+
+        jLabel13.setText("Name");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(660, 430, 32, 16);
+
+        jLabel14.setText("Contact");
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(670, 510, 42, 16);
+
+        jLabel15.setText("e-mail");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(670, 580, 34, 16);
+
+        jLabel16.setText("Address");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(670, 640, 42, 16);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(298, 388, 1051, 320);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1380, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 775, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if(name.getText().isEmpty()){
+             JOptionPane.showMessageDialog(rootPane,"Name cannot be empty");
+        }else if(dob.getDate()==null){
+            JOptionPane.showMessageDialog(rootPane,"Choose date of birth");
+        }else if(breed.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Breed cannot ne empty"); 
+        }else if(gender.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Gender cannot be empty "); 
+        }else if(spe.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Species cannot be empty");
+        }else if(sym.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Cannot be empty, enter NO if required");
+        }else if(premed.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Cannot be empty");
+        }else if(oname.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Enter your name"); 
+        }else if(phoneno.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Enter contacy information"); 
+        }else if(mail.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Email cannot be empty"); 
+        }else if(add.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Address cannot be empty"); 
+        }else{
+             String INSERTDB3 = "INSERT INTO petdetails( name, gender, species, breed, dob, premed, symp, oname, phoneno, email, address) " +
+                   "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+            try{
+               PreparedStatement ps=cn1.connection.prepareCall(INSERTDB3);
+               ps.setString(1, name.getText().toString());
+               ps.setString(2, gender.getText().toString());
+               ps.setString(3, spe.getText().toString());
+               ps.setString(4, breed.getText().toString());
+               ps.setString(5, dob.getDate().toString());
+               ps.setString(6, premed.getText().toString());
+               ps.setString(7, sym.getText().toString());
+               ps.setString(8, oname.getText().toString());
+               ps.setString(9, phoneno.getText().toString());
+               ps.setString(10,mail.getText().toString());
+               ps.setString(11,add.getText().toString());
+               
+               Boolean isAdded=ps.execute();
+               JOptionPane.showMessageDialog(rootPane,"Successful!");
+               if(isAdded==true){
+                   
+                   System.out.println("Successfully");
+               }
+            }
+             catch(SQLException sqlException){
+                System.out.println("Error Message"+sqlException.getMessage());
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,5 +262,33 @@ public class Details_p extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField add;
+    private javax.swing.JTextField breed;
+    private com.toedter.calendar.JDateChooser dob;
+    private javax.swing.JTextField gender;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField mail;
+    private javax.swing.JTextField name;
+    private javax.swing.JTextField oname;
+    private javax.swing.JTextField phoneno;
+    private javax.swing.JTextField premed;
+    private javax.swing.JTextField spe;
+    private javax.swing.JTextField sym;
     // End of variables declaration//GEN-END:variables
 }

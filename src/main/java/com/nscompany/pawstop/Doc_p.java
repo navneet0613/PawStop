@@ -26,17 +26,95 @@ public class Doc_p extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setMaximumSize(new java.awt.Dimension(1380, 775));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1380, 775));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1380, 775));
+        jPanel1.setLayout(null);
+
+        jLabel3.setText("Introduction");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(330, 220, 66, 16);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel4.setText("Dr. Jane Doe, DVM Veterinarian Doctor  ");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(390, 100, 650, 60);
+
+        jLabel5.setText("Education");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(340, 350, 53, 16);
+
+        jLabel6.setText("Experience ");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(340, 430, 60, 16);
+
+        jLabel7.setText("Certifications and Licenses  ");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(250, 520, 146, 16);
+
+        jLabel8.setText("Professional Memberships ");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(260, 620, 142, 16);
+
+        jLabel9.setText("<html><p>I am a passionate and dedicated veterinarian with 10 years of experience in providing compassionate care to animals. My expertise lies in [specific areas of veterinary medicine or specialties]. I am committed to staying updated with the latest advancements in veterinary medicine to ensure the highest quality of care for my patients. </p></html> ");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(510, 200, 370, 100);
+
+        jLabel10.setText("Doctor of Veterinary Medicine (DVM) - [Name of Veterinary School], [Year of Graduation] Bachelor of Science in Biology/Animal Science - [Name of University], [Year of Graduation]");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(510, 330, 390, 70);
+
+        jLabel11.setText("[Current Position] - [Name of Veterinary Clinic/Hospital], [Location]  Provide comprehensive medical care to companion animals, including dogs, cats, and exotic pets. Perform routine examinations, vaccinations, and diagnostic tests. Perform surgeries, including spay/neuter procedures, soft tissue surgeries, and dental procedures. Collaborate with veterinary technicians and support staff to deliver exceptional patient care.");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(510, 440, 480, 16);
+
+        jLabel12.setText("Licensed Veterinarian - [State]");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(510, 520, 170, 16);
+
+        jLabel13.setText("Member of [Professional Veterinary Association]American Veterinary Medical Association (AVMA) - United States");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(540, 620, 595, 16);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(30, 30, 1051, 320);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(299, 390, 1051, 320);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -78,5 +156,19 @@ public class Doc_p extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

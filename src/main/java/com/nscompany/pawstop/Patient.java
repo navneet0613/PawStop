@@ -23,12 +23,12 @@ public class Patient extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        det = new javax.swing.JLabel();
+        pre = new javax.swing.JLabel();
+        ap = new javax.swing.JLabel();
+        dd = new javax.swing.JLabel();
+        con = new javax.swing.JLabel();
+        pro = new javax.swing.JLabel();
         deet = new javax.swing.JLabel();
         prescrip = new javax.swing.JLabel();
         app = new javax.swing.JLabel();
@@ -44,136 +44,136 @@ public class Patient extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(102, 204, 255));
         jPanel1.setLayout(null);
 
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(52, 139, 227));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/details.png"))); // NOI18N
-        jLabel8.setText("Details");
-        jLabel8.setToolTipText("Enter your pet's details");
-        jLabel8.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jLabel8.setFocusCycleRoot(true);
-        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(150, 100, 190, 160);
+        det.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        det.setForeground(new java.awt.Color(52, 139, 227));
+        det.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        det.setIcon(new javax.swing.ImageIcon(getClass().getResource("/details.png"))); // NOI18N
+        det.setText("Details");
+        det.setToolTipText("Enter your pet's details");
+        det.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        det.setFocusCycleRoot(true);
+        det.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        det.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        det.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                detMouseClicked(evt);
+            }
+        });
+        jPanel1.add(det);
+        det.setBounds(150, 100, 190, 160);
 
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(52, 139, 227));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prescriptionn.png"))); // NOI18N
-        jLabel9.setText("Presriptions\n");
-        jLabel9.setToolTipText("View prescription and diagnosis provided by the doctor ");
-        jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel9.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(510, 100, 150, 160);
+        pre.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        pre.setForeground(new java.awt.Color(52, 139, 227));
+        pre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prescriptionn.png"))); // NOI18N
+        pre.setText("Presriptions\n");
+        pre.setToolTipText("View prescription and diagnosis provided by the doctor ");
+        pre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        pre.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                preMouseClicked(evt);
+            }
+        });
+        jPanel1.add(pre);
+        pre.setBounds(510, 100, 150, 160);
 
-        jLabel10.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(52, 139, 227));
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/appointment.png"))); // NOI18N
-        jLabel10.setText("Appointment");
-        jLabel10.setToolTipText("Schedule an appointment");
-        jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel10.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(840, 100, 170, 160);
+        ap.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        ap.setForeground(new java.awt.Color(52, 139, 227));
+        ap.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/appointment.png"))); // NOI18N
+        ap.setText("Appointment");
+        ap.setToolTipText("Schedule an appointment");
+        ap.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ap.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ap.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                apMouseClicked(evt);
+            }
+        });
+        jPanel1.add(ap);
+        ap.setBounds(840, 100, 170, 160);
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(52, 139, 227));
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/doc.png"))); // NOI18N
-        jLabel11.setText("Doc Profile");
-        jLabel11.setToolTipText("View doctor's profile");
-        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel11.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel11);
-        jLabel11.setBounds(170, 390, 160, 150);
+        dd.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        dd.setForeground(new java.awt.Color(52, 139, 227));
+        dd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/doc.png"))); // NOI18N
+        dd.setText("Doc Profile");
+        dd.setToolTipText("View doctor's profile");
+        dd.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        dd.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        dd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ddMouseClicked(evt);
+            }
+        });
+        jPanel1.add(dd);
+        dd.setBounds(170, 390, 160, 150);
 
-        jLabel12.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(52, 139, 227));
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contact.png"))); // NOI18N
-        jLabel12.setText("Contact Us");
-        jLabel12.setToolTipText("Contact the clinic");
-        jLabel12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel12.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel12);
-        jLabel12.setBounds(530, 380, 130, 160);
+        con.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        con.setForeground(new java.awt.Color(52, 139, 227));
+        con.setIcon(new javax.swing.ImageIcon(getClass().getResource("/contact.png"))); // NOI18N
+        con.setText("Contact Us");
+        con.setToolTipText("Contact the clinic");
+        con.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        con.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        con.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                conMouseClicked(evt);
+            }
+        });
+        jPanel1.add(con);
+        con.setBounds(530, 380, 130, 160);
 
-        jLabel13.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(52, 139, 227));
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proff.png"))); // NOI18N
-        jLabel13.setText("Profile");
-        jLabel13.setToolTipText("View your pet's profile ");
-        jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jLabel13.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(860, 376, 140, 170);
+        pro.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        pro.setForeground(new java.awt.Color(52, 139, 227));
+        pro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proff.png"))); // NOI18N
+        pro.setText("Profile");
+        pro.setToolTipText("View your pet's profile ");
+        pro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        pro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        pro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                proMouseClicked(evt);
+            }
+        });
+        jPanel1.add(pro);
+        pro.setBounds(860, 376, 140, 170);
 
         deet.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         deet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rr.png"))); // NOI18N
         deet.setToolTipText("Enter your pet's details");
-        deet.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                deetMouseClicked(evt);
-            }
-        });
         jPanel1.add(deet);
         deet.setBounds(130, 70, 230, 220);
 
         prescrip.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         prescrip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rr.png"))); // NOI18N
         prescrip.setToolTipText("View prescription and diagnosis provided by the doctor ");
-        prescrip.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                prescripMouseClicked(evt);
-            }
-        });
         jPanel1.add(prescrip);
         prescrip.setBounds(470, 70, 230, 220);
 
         app.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         app.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rr.png"))); // NOI18N
         app.setToolTipText("Schedule an appointment");
-        app.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                appMouseClicked(evt);
-            }
-        });
         jPanel1.add(app);
         app.setBounds(800, 70, 240, 220);
 
         doc.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         doc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rr.png"))); // NOI18N
         doc.setToolTipText("View doctor's profile");
-        doc.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                docMouseClicked(evt);
-            }
-        });
         jPanel1.add(doc);
         doc.setBounds(140, 350, 220, 220);
 
         cont.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         cont.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rr.png"))); // NOI18N
         cont.setToolTipText("Contact the clinic");
-        cont.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                contMouseClicked(evt);
-            }
-        });
         jPanel1.add(cont);
         cont.setBounds(480, 340, 220, 240);
 
         prof.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         prof.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rr.png"))); // NOI18N
         prof.setToolTipText("View your pet's profile ");
-        prof.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                profMouseClicked(evt);
-            }
-        });
         jPanel1.add(prof);
         prof.setBounds(810, 350, 230, 220);
 
@@ -187,44 +187,43 @@ public class Patient extends javax.swing.JFrame {
         jLabel2.setBounds(0, 0, 1920, 1080);
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void deetMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deetMouseClicked
-        Details_p d=new Details_p();
+    private void detMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_detMouseClicked
+       Details_p d=new Details_p();
         this.dispose();
         d.setVisible(true);
-    }//GEN-LAST:event_deetMouseClicked
+    }//GEN-LAST:event_detMouseClicked
 
-    private void prescripMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_prescripMouseClicked
-        Prescription_p p=new Prescription_p();
+    private void preMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_preMouseClicked
+         Prescription_p p=new Prescription_p();
         this.dispose();
         p.setVisible(true);
-    }//GEN-LAST:event_prescripMouseClicked
+    }//GEN-LAST:event_preMouseClicked
 
-    private void appMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appMouseClicked
-        Appointment_p a = new Appointment_p();
+    private void apMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apMouseClicked
+         Appointment_p a = new Appointment_p();
         this.dispose();
         a.setVisible(true);
-    }//GEN-LAST:event_appMouseClicked
+    }//GEN-LAST:event_apMouseClicked
 
-    private void docMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_docMouseClicked
+    private void ddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ddMouseClicked
        Doc_p doc =new Doc_p();
        this.dispose();
        doc.setVisible(true);
-    }//GEN-LAST:event_docMouseClicked
+    }//GEN-LAST:event_ddMouseClicked
 
-    private void contMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contMouseClicked
+    private void conMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_conMouseClicked
        Contact_p co =new Contact_p();
        this.dispose();
        co.setVisible(true);       
-    }//GEN-LAST:event_contMouseClicked
+    }//GEN-LAST:event_conMouseClicked
 
-    private void profMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profMouseClicked
+    private void proMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_proMouseClicked
        Profile_p pp =new Profile_p();
        this.dispose();
        pp.setVisible(true);
-    }//GEN-LAST:event_profMouseClicked
+    }//GEN-LAST:event_proMouseClicked
 
     /**
      * @param args the command line arguments
@@ -262,19 +261,19 @@ public class Patient extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ap;
     private javax.swing.JLabel app;
+    private javax.swing.JLabel con;
     private javax.swing.JLabel cont;
+    private javax.swing.JLabel dd;
     private javax.swing.JLabel deet;
+    private javax.swing.JLabel det;
     private javax.swing.JLabel doc;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel pre;
     private javax.swing.JLabel prescrip;
+    private javax.swing.JLabel pro;
     private javax.swing.JLabel prof;
     // End of variables declaration//GEN-END:variables
 }
