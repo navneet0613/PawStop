@@ -23,7 +23,7 @@ public class ConnectionClass {
         try {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pawstop", "root", "");
 
-            System.out.println("connection issssss" + connection);
+//            System.out.println("connection issssss" + connection);
             if (connection != null) {
                 System.out.println("connected");
 
@@ -32,7 +32,8 @@ public class ConnectionClass {
                         "  name VARCHAR(255),\n" +
                         "  userid VARCHAR(255),\n" +
                         "  phoneno VARCHAR(255),\n" +
-                        "  password VARCHAR(255)\n" +
+                        "  password VARCHAR(255),\n" +
+                        "  role VARCHAR(255)\n" +
                         ");";
 
                 PreparedStatement preparedStatement1 = connection.prepareStatement(statement1);
@@ -56,16 +57,33 @@ public class ConnectionClass {
                 PreparedStatement preparedStatement2 = connection.prepareStatement(statement2);
                 preparedStatement2.execute();
 
-//                String statement3 = "CREATE TABLE IF NOT EXISTS tbl_taskupdate(\n" +
-//                        "  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,\n" +
-//                        "  Task_ID VARCHAR(255),\n" +
-//                        "  Assigned_by VARCHAR(255),\n" +
-//                        "  Submission_Status VARCHAR(255),\n" +
-//                        "  Current_Progress VARCHAR(255),\n" +
-//                        "  Updates VARCHAR(255)\n" +
-//                        ");";
-//                PreparedStatement preparedStatement3 = connection.prepareStatement(statement3);
-//                preparedStatement3.execute();
+                String statement3 = "CREATE TABLE IF NOT EXISTS appointment(\n" +
+                        "  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,\n" +
+                        "  name VARCHAR(255),\n" +
+                        "  gender VARCHAR(255),\n" +
+                        "  species VARCHAR(255),\n" +
+                        "  breed VARCHAR(255),\n" +
+                        "  dob VARCHAR(255),\n" +
+                        "  purposeofvisit VARCHAR(255),\n" +
+                        "  symptom VARCHAR(255),\n" +
+                        "  dateofapp VARCHAR(255),\n" +
+                        "  oname VARCHAR(255),\n" +
+                        "  phoneno VARCHAR(255),\n" +
+                        "  email VARCHAR(255),\n" +
+                        "  address VARCHAR(255)\n" +
+                        ");";
+                PreparedStatement preparedStatement3 = connection.prepareStatement(statement3);
+                preparedStatement3.execute();
+                
+                String statement4 = "CREATE TABLE IF NOT EXISTS prescription(\n" +
+                        "  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,\n" +
+                        "  name VARCHAR(255),\n" +
+                        "  disease VARCHAR(255),\n" +
+                        "  prescription VARCHAR(255)\n" +
+                        ");";
+
+                PreparedStatement preparedStatement4 = connection.prepareStatement(statement4);
+                preparedStatement4.execute();
 
             }
 

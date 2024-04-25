@@ -14,6 +14,15 @@ public class user_details {
     String userid;
     String phoneno;
     String password; 
+    String role;
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+   
+    public String getRole() {
+        return role;
+    }
     
     public int getId() {
         return id;

@@ -4,6 +4,9 @@
  */
 package com.nscompany.pawstop;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -11,10 +14,8 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  * @author Lenovo
  */
 public class Appointment_a extends javax.swing.JInternalFrame {
-
-    /**
-     * Creates new form Appointment_a
-     */
+ConnectionClass cn1=new ConnectionClass.getInstance();
+    
     public Appointment_a() {
         initComponents();
          this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
@@ -34,25 +35,33 @@ public class Appointment_a extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        apdt = new com.toedter.calendar.JDateChooser();
+        dob = new com.toedter.calendar.JDateChooser();
+        sym = new javax.swing.JTextField();
+        name = new javax.swing.JTextField();
+        gender = new javax.swing.JTextField();
+        species = new javax.swing.JTextField();
+        purr = new javax.swing.JTextField();
+        breed = new javax.swing.JTextField();
+        oname = new javax.swing.JTextField();
+        phoneno = new javax.swing.JTextField();
+        mail = new javax.swing.JTextField();
+        add = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setBorder(null);
         setMaximumSize(new java.awt.Dimension(1150, 734));
@@ -63,76 +72,64 @@ public class Appointment_a extends javax.swing.JInternalFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
+        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(52, 139, 227));
         jLabel2.setText("Owner Details");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(140, 410, 80, 40);
+        jLabel2.setBounds(150, 470, 140, 40);
 
+        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(52, 139, 227));
         jLabel1.setText("Pet Details");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(120, 60, 90, 40);
+        jLabel1.setBounds(50, 140, 100, 40);
 
-        jDateChooser2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Date and Time of Appointment", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
-        jPanel1.add(jDateChooser2);
-        jDateChooser2.setBounds(640, 280, 260, 50);
+        apdt.setMinSelectableDate(new java.util.Date(-62135785719000L));
+        apdt.setOpaque(false);
+        jPanel1.add(apdt);
+        apdt.setBounds(800, 280, 260, 30);
 
-        jDateChooser1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Date of Birth", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
-        jPanel1.add(jDateChooser1);
-        jDateChooser1.setBounds(290, 220, 260, 50);
-
-        jTextField4.setText("-if any-");
-        jTextField4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Symptoms ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
-        jPanel1.add(jTextField4);
-        jTextField4.setBounds(290, 290, 260, 40);
-
-        jTextField1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Name", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
-        jPanel1.add(jTextField1);
-        jTextField1.setBounds(290, 100, 260, 40);
-
-        jTextField2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gender", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
-        jPanel1.add(jTextField2);
-        jTextField2.setBounds(640, 100, 260, 40);
-
-        jTextField3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Species", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
-        jPanel1.add(jTextField3);
-        jTextField3.setBounds(290, 160, 260, 41);
-
-        jTextField6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Purpose of visit", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
-        jPanel1.add(jTextField6);
-        jTextField6.setBounds(640, 220, 260, 40);
-
-        jTextField8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Breed", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 1, 12), new java.awt.Color(102, 204, 255))); // NOI18N
-        jPanel1.add(jTextField8);
-        jTextField8.setBounds(640, 160, 260, 41);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(180, 50, 970, 320);
-        jPanel1.add(jTextField5);
-        jTextField5.setBounds(530, 450, 270, 30);
-        jPanel1.add(jTextField7);
-        jTextField7.setBounds(530, 500, 270, 30);
-        jPanel1.add(jTextField9);
-        jTextField9.setBounds(530, 550, 270, 30);
-        jPanel1.add(jTextField10);
-        jTextField10.setBounds(530, 600, 270, 30);
+        dob.setToolTipText("");
+        jPanel1.add(dob);
+        dob.setBounds(350, 230, 260, 30);
+        jPanel1.add(sym);
+        sym.setBounds(350, 290, 260, 30);
+        jPanel1.add(name);
+        name.setBounds(350, 100, 260, 30);
+        jPanel1.add(gender);
+        gender.setBounds(800, 100, 260, 30);
+        jPanel1.add(species);
+        species.setBounds(350, 162, 260, 30);
+        jPanel1.add(purr);
+        purr.setBounds(800, 220, 260, 30);
+        jPanel1.add(breed);
+        breed.setBounds(800, 160, 260, 30);
+        jPanel1.add(oname);
+        oname.setBounds(530, 450, 270, 30);
+        jPanel1.add(phoneno);
+        phoneno.setBounds(530, 500, 270, 30);
+        jPanel1.add(mail);
+        mail.setBounds(530, 550, 270, 30);
+        jPanel1.add(add);
+        add.setBounds(530, 600, 270, 30);
 
         jLabel5.setText("Name");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(400, 456, 32, 20);
+        jLabel5.setBounds(390, 460, 80, 30);
 
-        jLabel6.setText("Contact Number");
+        jLabel6.setText("Phone No");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(380, 510, 90, 16);
+        jLabel6.setBounds(390, 510, 130, 20);
 
         jLabel7.setText("E-mail");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(400, 560, 34, 16);
+        jLabel7.setBounds(390, 560, 80, 16);
 
         jLabel8.setText("Address");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(400, 610, 50, 20);
+        jLabel8.setBounds(390, 610, 60, 20);
 
-        jButton1.setText("CONFIRM");
+        jButton1.setText("SUBMIT");
         jButton1.setToolTipText("Book your appointment");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,11 +137,47 @@ public class Appointment_a extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(870, 670, 250, 30);
+        jButton1.setBounds(530, 660, 260, 30);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
         jPanel1.add(jLabel4);
         jLabel4.setBounds(350, 390, 810, 320);
+
+        jLabel9.setText("Name");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(240, 110, 50, 16);
+
+        jLabel10.setText("Species");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(230, 170, 50, 16);
+
+        jLabel11.setText("Date of Birth");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(226, 240, 80, 16);
+
+        jLabel12.setText("Symptoms/Disease");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(221, 310, 110, 16);
+
+        jLabel13.setText("Gender");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(700, 110, 60, 16);
+
+        jLabel14.setText("Breed");
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(700, 160, 40, 30);
+
+        jLabel15.setText("Purpose of visit");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(680, 230, 100, 16);
+
+        jLabel16.setText("Appointment date");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(670, 290, 110, 16);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(180, 50, 970, 320);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, -30, 1260, 780);
@@ -153,15 +186,76 @@ public class Appointment_a extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void submit(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submit
-        // TODO add your handling code here:
+      if(name.getText().isEmpty()){
+             JOptionPane.showMessageDialog(rootPane,"Name cannot be empty");
+        }else if(dob.getDate()==null){
+            JOptionPane.showMessageDialog(rootPane,"Choose date of birth");
+        }else if(breed.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Breed cannot ne empty"); 
+        }else if(apdt.getDate()==null){
+             JOptionPane.showMessageDialog(rootPane,"Choose appointment date");
+        }else if(gender.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Gender cannot be empty "); 
+        }else if(species.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Species cannot be empty");
+        }else if(purr.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Enter purpose of your visit");
+        }else if(sym.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Cannot be empty, enter NO if required");
+        }else if(oname.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Enter your name"); 
+        }else if(phoneno.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Enter contacy information"); 
+        }else if(mail.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Email cannot be empty"); 
+        }else if(add.getText().isEmpty()){
+            JOptionPane.showMessageDialog(rootPane,"Address cannot be empty"); 
+        }else{
+             String INSERTDB3="INSERT INTO appointment( name,gender,species,breed,dob,purposeofvisit,symptom,dateofapp,oname,phoneno,email,address)"+" VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
+           try{
+              PreparedStatement ps=cn1.connection.prepareCall(INSERTDB3);
+               ps.setString(1, name.getText().toString());
+              ps.setString(2, gender.getText().toString());
+               ps.setString(3, species.getText().toString());
+              ps.setString(4, breed.getText().toString());              
+               ps.setString(5, dob.getDate().toString());
+               ps.setString(6, purr.getText().toString());
+               ps.setString(7, sym.getText().toString());
+               ps.setString(8, apdt.getDate().toString());
+               ps.setString(9, oname.getText().toString());                  
+               ps.setString(10, phoneno.getText().toString());
+               ps.setString(11, mail.getText().toString());
+               ps.setString(12, add.getText().toString());
+
+               Boolean isAdded=ps.execute();
+               JOptionPane.showMessageDialog(rootPane,"Successful!");
+              if(isAdded==true){
+                   
+                   System.out.println("Successfully");
+              }
+            }
+            catch(SQLException sqlException){
+                System.out.println("Error Message"+sqlException.getMessage());
+            }
+        }  
     }//GEN-LAST:event_submit
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField add;
+    private com.toedter.calendar.JDateChooser apdt;
+    private javax.swing.JTextField breed;
+    private com.toedter.calendar.JDateChooser dob;
+    private javax.swing.JTextField gender;
     private javax.swing.JButton jButton1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -169,16 +263,14 @@ public class Appointment_a extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField mail;
+    private javax.swing.JTextField name;
+    private javax.swing.JTextField oname;
+    private javax.swing.JTextField phoneno;
+    private javax.swing.JTextField purr;
+    private javax.swing.JTextField species;
+    private javax.swing.JTextField sym;
     // End of variables declaration//GEN-END:variables
 }

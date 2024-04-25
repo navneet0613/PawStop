@@ -4,6 +4,9 @@
  */
 package com.nscompany.pawstop;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -11,10 +14,9 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  * @author Lenovo
  */
 public class Newpriscription_a extends javax.swing.JInternalFrame {
+ConnectionClass cn1=new ConnectionClass.getInstance();
 
-    /**
-     * Creates new form Newpriscription_a
-     */
+    
     public Newpriscription_a() {
         initComponents();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
@@ -33,12 +35,15 @@ public class Newpriscription_a extends javax.swing.JInternalFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        pres = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        name = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        dis = new javax.swing.JTextField();
+        submit = new javax.swing.JButton();
 
         setBorder(null);
         setMaximumSize(new java.awt.Dimension(1150, 734));
@@ -51,16 +56,18 @@ public class Newpriscription_a extends javax.swing.JInternalFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(1150, 734));
         jPanel2.setLayout(null);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        pres.setColumns(20);
+        pres.setRows(5);
+        jScrollPane1.setViewportView(pres);
 
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(260, 70, 720, 490);
 
+        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(52, 139, 227));
         jLabel3.setText("Prescription");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(70, 70, 63, 20);
+        jLabel3.setBounds(10, 40, 150, 40);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
         jPanel2.add(jLabel1);
@@ -70,11 +77,34 @@ public class Newpriscription_a extends javax.swing.JInternalFrame {
         jPanel2.add(jLabel2);
         jLabel2.setBounds(434, 355, 716, 320);
 
-        jLabel4.setText("Prescribed to=");
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel4.setText("Prescribed to");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(10, 130, 90, 16);
-        jPanel2.add(jTextField1);
-        jTextField1.setBounds(91, 122, 80, 30);
+        jLabel4.setBounds(10, 120, 100, 30);
+        jPanel2.add(name);
+        name.setBounds(110, 120, 140, 30);
+
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel5.setText("Disease");
+        jPanel2.add(jLabel5);
+        jLabel5.setBounds(20, 180, 60, 20);
+
+        dis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                disActionPerformed(evt);
+            }
+        });
+        jPanel2.add(dis);
+        dis.setBounds(110, 180, 140, 30);
+
+        submit.setText("SUBMIT");
+        submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitActionPerformed(evt);
+            }
+        });
+        jPanel2.add(submit);
+        submit.setBounds(265, 572, 150, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,15 +122,52 @@ public class Newpriscription_a extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
+        if(name.getText().isEmpty()){
+             JOptionPane.showMessageDialog(rootPane,"Name cannot be empty");
+        }else if(dis.getText().isEmpty()){
+             JOptionPane.showMessageDialog(rootPane,"Mention disease");
+        }else if(pres.getText().isEmpty()){
+             JOptionPane.showMessageDialog(rootPane,"Add prescription");
+        }else{
+         String INSERTDB3="INSERT INTO prescription( name,disease,prescription)"+" VALUES(?,?,?)";
+           try{
+              PreparedStatement ps=cn1.connection.prepareCall(INSERTDB3);
+               ps.setString(1, name.getText().toString());
+              ps.setString(2, dis.getText().toString());
+               ps.setString(3, pres.getText().toString());
+        
+           
+               Boolean isAdded=ps.execute();
+               JOptionPane.showMessageDialog(rootPane,"Successful!");
+              if(isAdded==true){
+                   
+                   System.out.println("Successfully");
+              }
+            }
+            catch(SQLException sqlException){
+                System.out.println("Error Message"+sqlException.getMessage());
+            }
+        }
+
+    }//GEN-LAST:event_submitActionPerformed
+
+    private void disActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_disActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField dis;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField name;
+    private javax.swing.JTextArea pres;
+    private javax.swing.JButton submit;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,18 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package com.nscompany.pawstop;
 import java.awt.Color;
-/**
- *
- * @author Lenovo
- */
+
 public class admin_a extends javax.swing.JFrame {
     Color DefaultColor,ClickedColor;
-    /**
-     * Creates new form admin_a
-     */
+    
     public admin_a() {
         initComponents();
          //the color code 
@@ -406,9 +398,9 @@ public class admin_a extends javax.swing.JFrame {
     }//GEN-LAST:event_appMouseClicked
 
     private void npatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_npatMouseClicked
-        Newpatient_a n=new Newpatient_a();
-        desk.removeAll();
-        desk.add(n).setVisible(true);
+       Newpatient_a n=new Newpatient_a();
+       desk.removeAll();
+       desk.add(n).setVisible(true);
     }//GEN-LAST:event_npatMouseClicked
 
     private void presMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_presMouseClicked

@@ -51,6 +51,7 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1380, 775));
@@ -62,67 +63,71 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
         jPanel1.setPreferredSize(new java.awt.Dimension(1380, 775));
         jPanel1.setLayout(null);
 
+        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(52, 139, 227));
         jLabel3.setText("Pet details");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(1140, 110, 54, 16);
+        jLabel3.setBounds(1140, 110, 110, 21);
 
         jLabel4.setText("Name");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(210, 80, 32, 16);
+        jLabel4.setBounds(210, 80, 60, 30);
 
         jLabel5.setText("Species ");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(210, 130, 50, 16);
+        jLabel5.setBounds(210, 130, 60, 30);
 
         jLabel6.setText("Date of Birth");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(200, 190, 80, 16);
+        jLabel6.setBounds(200, 190, 80, 30);
 
         jLabel7.setText("Symptoms/ Diseases");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(180, 240, 120, 20);
+        jLabel7.setBounds(180, 240, 120, 30);
 
         jLabel8.setText("Gender");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(620, 80, 50, 16);
+        jLabel8.setBounds(620, 80, 50, 30);
 
         jLabel9.setText("Breed");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(620, 140, 30, 16);
+        jLabel9.setBounds(620, 150, 50, 16);
 
-        jLabel10.setText("previous medications");
+        jLabel10.setText("Previous Medications");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(590, 190, 120, 20);
+        jLabel10.setBounds(590, 200, 120, 30);
         jPanel1.add(name);
-        name.setBounds(310, 80, 64, 22);
+        name.setBounds(310, 80, 200, 30);
         jPanel1.add(spe);
-        spe.setBounds(310, 130, 64, 22);
+        spe.setBounds(310, 130, 200, 30);
         jPanel1.add(sym);
-        sym.setBounds(320, 240, 64, 22);
+        sym.setBounds(310, 240, 200, 30);
         jPanel1.add(gender);
-        gender.setBounds(730, 80, 64, 22);
+        gender.setBounds(730, 80, 200, 30);
         jPanel1.add(breed);
-        breed.setBounds(730, 140, 64, 22);
+        breed.setBounds(730, 140, 200, 30);
         jPanel1.add(premed);
-        premed.setBounds(740, 200, 64, 22);
+        premed.setBounds(730, 200, 200, 30);
         jPanel1.add(dob);
-        dob.setBounds(310, 190, 96, 22);
+        dob.setBounds(310, 190, 200, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(30, 30, 1051, 320);
 
+        jLabel12.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(52, 139, 227));
         jLabel12.setText("Owner Details ");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(110, 480, 90, 16);
+        jLabel12.setBounds(110, 480, 130, 21);
         jPanel1.add(oname);
-        oname.setBounds(790, 430, 64, 22);
+        oname.setBounds(720, 430, 220, 30);
         jPanel1.add(phoneno);
-        phoneno.setBounds(790, 500, 64, 22);
+        phoneno.setBounds(720, 490, 220, 30);
         jPanel1.add(mail);
-        mail.setBounds(800, 570, 64, 22);
+        mail.setBounds(720, 550, 220, 30);
         jPanel1.add(add);
-        add.setBounds(800, 630, 64, 22);
+        add.setBounds(720, 610, 220, 30);
 
         jButton1.setText("SUBMIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -131,27 +136,38 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(1040, 660, 150, 30);
+        jButton1.setBounds(720, 660, 220, 30);
 
         jLabel13.setText("Name");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(660, 430, 32, 16);
+        jLabel13.setBounds(620, 430, 60, 30);
 
-        jLabel14.setText("Contact");
+        jLabel14.setText("Phone No.");
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(670, 510, 42, 16);
+        jLabel14.setBounds(610, 500, 70, 16);
 
-        jLabel15.setText("e-mail");
+        jLabel15.setText("Email");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(670, 580, 34, 16);
+        jLabel15.setBounds(620, 560, 50, 16);
 
         jLabel16.setText("Address");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(670, 640, 42, 16);
+        jLabel16.setBounds(620, 610, 50, 16);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
         jPanel1.add(jLabel2);
         jLabel2.setBounds(298, 388, 1051, 320);
+
+        jButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(102, 204, 255));
+        jButton2.setText("BACK");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(1190, 30, 72, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -226,6 +242,12 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Patient p=new Patient();
+        this.dispose();
+        p.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -267,6 +289,7 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
     private com.toedter.calendar.JDateChooser dob;
     private javax.swing.JTextField gender;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
