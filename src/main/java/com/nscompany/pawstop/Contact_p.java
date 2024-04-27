@@ -78,20 +78,20 @@ public class Contact_p extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Email");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(400, 410, 70, 26);
+        jLabel6.setBounds(400, 380, 70, 26);
 
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 204, 255));
         jLabel7.setText("Social Media ");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(400, 480, 150, 26);
+        jLabel7.setBounds(390, 460, 150, 26);
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 204, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Business hours");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(400, 600, 157, 26);
+        jLabel8.setBounds(390, 590, 157, 26);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -107,25 +107,27 @@ public class Contact_p extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel11.setText("pawstop@gmail.com");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(590, 410, 160, 17);
+        jLabel11.setBounds(580, 380, 160, 17);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel12.setText("<html>[Facebook icon/link]<br> [Twitter icon/link] <br>[Instagram icon/link]<br> [LinkedIn icon/link]<br> [YouTube icon/link]</html>");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(590, 470, 270, 100);
+        jLabel12.setBounds(580, 450, 270, 100);
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel13.setText("<html>Monday - Friday: 9:00 AM - 5:00 PM<br> Saturday: 9:00 AM - 1:00 PM <br>Sunday: Closed</html>");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(590, 600, 240, 50);
+        jLabel13.setBounds(580, 590, 240, 50);
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(30, 30, 1051, 320);
+        jLabel1.setBounds(190, 60, 970, 320);
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(299, 391, 1051, 320);
+        jLabel2.setBounds(190, 380, 970, 320);
 
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(102, 204, 255));

@@ -38,8 +38,6 @@ public class Doc_p extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -110,14 +108,6 @@ public class Doc_p extends javax.swing.JFrame {
         jLabel13.setText("Member of [Professional Veterinary Association]American Veterinary Medical Association (AVMA) - United States");
         jPanel1.add(jLabel13);
         jLabel13.setBounds(580, 610, 707, 17);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(30, 30, 1051, 320);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(299, 390, 1051, 320);
 
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(102, 204, 255));
@@ -191,12 +181,10 @@ public class Doc_p extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

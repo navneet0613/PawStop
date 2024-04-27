@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class Log extends javax.swing.JFrame {
 ConnectionClass cn1=new ConnectionClass.getInstance();
+
     
     public Log() {
         initComponents();
