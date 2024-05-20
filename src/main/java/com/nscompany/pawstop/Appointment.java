@@ -17,6 +17,15 @@ public class Appointment {
     String phoneno;
     String email;
     String address;
+    String dateofapp;
+
+    public String getDateofapp() {
+        return dateofapp;
+    }
+
+    public void setDateofapp(String dateofapp) {
+        this.dateofapp = dateofapp;
+    }
 
     public void setId(int id) {
         this.id = id;

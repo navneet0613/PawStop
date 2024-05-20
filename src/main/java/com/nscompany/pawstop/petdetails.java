@@ -10,12 +10,13 @@ package com.nscompany.pawstop;
  */
 public class petdetails {
      int id;
-    String name;
+    String name;   
     String gender;
     String species;
     String breed;
     String dob;
     String premed;
+    String symp;
     String oname;
     String phoneno;
     String email;
@@ -93,6 +94,26 @@ public class petdetails {
         this.id = id;
     }
     
+  public String getSymp() {
+        return symp;
+    }
 
-    
+    public void setSymp(String symp) {
+        this.symp = symp;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+      public String getPhoneno() {
+        return phoneno;
+    }
+
+    public void setPhoneno(String phoneno) {
+        this.phoneno = phoneno;
+    }
 }

@@ -22,6 +22,8 @@ public class Patient extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         det = new javax.swing.JLabel();
         pre = new javax.swing.JLabel();
@@ -35,11 +37,26 @@ public class Patient extends javax.swing.JFrame {
         doc = new javax.swing.JLabel();
         cont = new javax.swing.JLabel();
         prof = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1380, 775));
         getContentPane().setLayout(null);
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(10, 40, 140, 130);
+
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("USER");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(50, 170, 60, 30);
 
         jPanel1.setBackground(new java.awt.Color(102, 204, 255));
         jPanel1.setLayout(null);
@@ -178,7 +195,30 @@ public class Patient extends javax.swing.JFrame {
         prof.setBounds(810, 350, 230, 220);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(100, 60, 1170, 620);
+        jPanel1.setBounds(160, 70, 1170, 620);
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/close.png"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(1170, 20, 50, 30);
+
+        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel5.setText("<html><u>LOGOUT</u></html>");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(1210, 20, 70, 30);
+
+        jLabel6.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Welcome");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(180, 30, 110, 30);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sss.png"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(1380, 775));
@@ -189,41 +229,47 @@ public class Patient extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void detMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_detMouseClicked
-       Details_p d=new Details_p();
+    private void proMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_proMouseClicked
+        Profile_p pp =new Profile_p();
         this.dispose();
-        d.setVisible(true);
-    }//GEN-LAST:event_detMouseClicked
+        pp.setVisible(true);
+    }//GEN-LAST:event_proMouseClicked
 
-    private void preMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_preMouseClicked
-         Prescription_p p=new Prescription_p();
+    private void conMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_conMouseClicked
+        Contact_p co =new Contact_p();
         this.dispose();
-        p.setVisible(true);
-    }//GEN-LAST:event_preMouseClicked
+        co.setVisible(true);
+    }//GEN-LAST:event_conMouseClicked
+
+    private void ddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ddMouseClicked
+        Doc_p doc =new Doc_p();
+        this.dispose();
+        doc.setVisible(true);
+    }//GEN-LAST:event_ddMouseClicked
 
     private void apMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apMouseClicked
-         Appointment_p a = new Appointment_p();
+        Appointment_p a = new Appointment_p();
         this.dispose();
         a.setVisible(true);
     }//GEN-LAST:event_apMouseClicked
 
-    private void ddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ddMouseClicked
-       Doc_p doc =new Doc_p();
-       this.dispose();
-       doc.setVisible(true);
-    }//GEN-LAST:event_ddMouseClicked
+    private void preMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_preMouseClicked
+        Prescription_p p=new Prescription_p();
+        this.dispose();
+        p.setVisible(true);
+    }//GEN-LAST:event_preMouseClicked
 
-    private void conMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_conMouseClicked
-       Contact_p co =new Contact_p();
-       this.dispose();
-       co.setVisible(true);       
-    }//GEN-LAST:event_conMouseClicked
+    private void detMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_detMouseClicked
+        Details_p d=new Details_p();
+        this.dispose();
+        d.setVisible(true);
+    }//GEN-LAST:event_detMouseClicked
 
-    private void proMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_proMouseClicked
-       Profile_p pp =new Profile_p();
-       this.dispose();
-       pp.setVisible(true);
-    }//GEN-LAST:event_proMouseClicked
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        Log l=new Log();
+        this.dispose();
+        l.setVisible(true);
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments
@@ -269,7 +315,12 @@ public class Patient extends javax.swing.JFrame {
     private javax.swing.JLabel deet;
     private javax.swing.JLabel det;
     private javax.swing.JLabel doc;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel pre;
     private javax.swing.JLabel prescrip;

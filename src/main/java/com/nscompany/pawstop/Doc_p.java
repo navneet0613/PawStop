@@ -39,6 +39,7 @@ public class Doc_p extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,69 +49,75 @@ public class Doc_p extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1380, 775));
         jPanel1.setLayout(null);
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel3.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Introduction");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(290, 220, 150, 26);
+        jLabel3.setBounds(350, 140, 150, 50);
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(52, 139, 227));
         jLabel4.setText("Dr. Jane Doe, DVM Veterinarian Doctor  ");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(380, 100, 700, 60);
+        jLabel4.setBounds(370, 40, 700, 60);
 
-        jLabel5.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel5.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Education");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(300, 350, 110, 26);
+        jLabel5.setBounds(360, 270, 130, 30);
 
-        jLabel6.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel6.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Experience ");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(290, 430, 120, 26);
+        jLabel6.setBounds(370, 380, 120, 27);
 
-        jLabel7.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel7.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Certifications and Licenses  ");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(280, 520, 290, 26);
+        jLabel7.setBounds(280, 560, 290, 27);
 
-        jLabel8.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel8.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Professional Memberships ");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(280, 610, 270, 26);
+        jLabel8.setBounds(280, 620, 270, 27);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel9.setText("<html><p>I am a passionate and dedicated veterinarian with 10 years of experience in providing compassionate care to animals. My expertise lies in [specific areas of veterinary medicine or specialties]. I am committed to staying updated with the latest advancements in veterinary medicine to ensure the highest quality of care for my patients. </p></html> ");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(600, 200, 370, 130);
+        jLabel9.setBounds(570, 150, 560, 80);
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel10.setText("Doctor of Veterinary Medicine (DVM) - [Name of Veterinary School], [Year of Graduation] Bachelor of Science in Biology/Animal Science - [Name of University], [Year of Graduation]");
+        jLabel10.setText("<html>Doctor of Veterinary Medicine (DVM) <br>- [Name of Veterinary School], [Year of Graduation]<br> Bachelor of Science in Biology/Animal Science<br> - [Name of University], [Year of Graduation]</html>");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(600, 330, 390, 70);
+        jLabel10.setBounds(570, 270, 460, 70);
 
         jLabel11.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel11.setText("[Current Position] - [Name of Veterinary Clinic/Hospital], [Location]  Provide comprehensive medical care to companion animals, including dogs, cats, and exotic pets. Perform routine examinations, vaccinations, and diagnostic tests. Perform surgeries, including spay/neuter procedures, soft tissue surgeries, and dental procedures. Collaborate with veterinary technicians and support staff to deliver exceptional patient care.");
+        jLabel11.setText("<html>[Current Position]<br> - [Name of Veterinary Clinic/Hospital], [Location] <br> Provide comprehensive medical care to companion animals, including dogs, cats, and exotic pets.<br> Perform routine examinations, vaccinations, and diagnostic tests.<br> Perform surgeries, including spay/neuter procedures, soft tissue surgeries, and dental procedures.<br> Collaborate with veterinary technicians and support staff to deliver exceptional patient care.</html>");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(590, 430, 480, 17);
+        jLabel11.setBounds(570, 380, 590, 140);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel12.setText("Licensed Veterinarian - [State]");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(600, 520, 170, 17);
+        jLabel12.setBounds(570, 560, 270, 30);
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel13.setText("Member of [Professional Veterinary Association]American Veterinary Medical Association (AVMA) - United States");
+        jLabel13.setText("Member of American Veterinary Medical Association (AVMA) - United States");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(580, 610, 707, 17);
+        jLabel13.setBounds(570, 620, 590, 40);
 
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 204, 255));
+        jButton1.setBackground(new java.awt.Color(102, 204, 255));
+        jButton1.setFont(new java.awt.Font("Nirmala UI", 1, 16)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("BACK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +125,12 @@ public class Doc_p extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(1210, 30, 72, 23);
+        jButton1.setBounds(1170, 20, 160, 28);
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jj.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(110, 90, 1170, 630);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -181,6 +193,7 @@ public class Doc_p extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

@@ -44,7 +44,6 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(null);
@@ -77,19 +76,17 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(410, 40, 700, 270);
+        jScrollPane1.setBounds(80, 100, 980, 500);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jj.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(340, 18, 942, 320);
+        jLabel1.setBounds(20, 30, 1180, 620);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel2.setText("Prescriptions");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(559, 356, 723, 320);
-
-        jLabel3.setText("previous prescription and diagnosis medicatino bla bla bla");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(0, 169, 328, 16);
+        jLabel2.setBounds(160, 10, 170, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -172,7 +169,6 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

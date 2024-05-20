@@ -4,8 +4,12 @@
  */
 package com.nscompany.pawstop;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
@@ -18,9 +22,121 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
     
     public Appointment_a() {
         initComponents();
-         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
+        this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI uii=(BasicInternalFrameUI)this.getUI();
         uii.setNorthPane(null);
+        
+         add.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && add.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+          name.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && name.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+           gender.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && gender.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+            species.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && species.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+             breed.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && breed.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+              purr.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && purr.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+               sym.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && sym.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+               oname.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && oname.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+     phoneno.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && phoneno.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+      mail.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && mail.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+               
     }
 
     /**
@@ -72,63 +188,70 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(52, 139, 227));
         jLabel2.setText("Owner Details");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(150, 470, 140, 40);
+        jLabel2.setBounds(870, 490, 140, 50);
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(52, 139, 227));
         jLabel1.setText("Pet Details");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(50, 140, 100, 40);
+        jLabel1.setBounds(90, 160, 140, 40);
 
         apdt.setMinSelectableDate(new java.util.Date(-62135785719000L));
         apdt.setOpaque(false);
         jPanel1.add(apdt);
-        apdt.setBounds(800, 280, 260, 30);
+        apdt.setBounds(780, 270, 260, 30);
 
         dob.setToolTipText("");
         jPanel1.add(dob);
-        dob.setBounds(350, 230, 260, 30);
+        dob.setBounds(320, 220, 260, 30);
         jPanel1.add(sym);
-        sym.setBounds(350, 290, 260, 30);
+        sym.setBounds(320, 270, 260, 30);
         jPanel1.add(name);
-        name.setBounds(350, 100, 260, 30);
+        name.setBounds(320, 110, 260, 30);
         jPanel1.add(gender);
-        gender.setBounds(800, 100, 260, 30);
+        gender.setBounds(780, 110, 260, 30);
         jPanel1.add(species);
-        species.setBounds(350, 162, 260, 30);
+        species.setBounds(320, 170, 260, 30);
         jPanel1.add(purr);
-        purr.setBounds(800, 220, 260, 30);
+        purr.setBounds(780, 220, 260, 30);
         jPanel1.add(breed);
-        breed.setBounds(800, 160, 260, 30);
+        breed.setBounds(780, 160, 260, 30);
         jPanel1.add(oname);
-        oname.setBounds(530, 450, 270, 30);
+        oname.setBounds(530, 430, 270, 30);
         jPanel1.add(phoneno);
-        phoneno.setBounds(530, 500, 270, 30);
+        phoneno.setBounds(530, 490, 270, 30);
         jPanel1.add(mail);
-        mail.setBounds(530, 550, 270, 30);
+        mail.setBounds(530, 540, 270, 30);
         jPanel1.add(add);
-        add.setBounds(530, 600, 270, 30);
+        add.setBounds(530, 590, 270, 30);
 
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel5.setText("Name");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(390, 460, 80, 30);
+        jLabel5.setBounds(400, 430, 80, 30);
 
+        jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel6.setText("Phone No");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(390, 510, 130, 20);
+        jLabel6.setBounds(400, 490, 110, 20);
 
+        jLabel7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel7.setText("E-mail");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(390, 560, 80, 16);
+        jLabel7.setBounds(400, 550, 80, 17);
 
+        jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel8.setText("Address");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(390, 610, 60, 20);
+        jLabel8.setBounds(400, 590, 80, 20);
 
+        jButton1.setBackground(new java.awt.Color(102, 204, 255));
+        jButton1.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("SUBMIT");
         jButton1.setToolTipText("Book your appointment");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -137,47 +260,55 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(530, 660, 260, 30);
+        jButton1.setBounds(460, 660, 270, 30);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(350, 390, 810, 320);
+        jLabel4.setBounds(60, 390, 1060, 320);
 
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel9.setText("Name");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(240, 110, 50, 16);
+        jLabel9.setBounds(220, 120, 70, 20);
 
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel10.setText("Species");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(230, 170, 50, 16);
+        jLabel10.setBounds(210, 170, 70, 30);
 
+        jLabel11.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel11.setText("Date of Birth");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(226, 240, 80, 16);
+        jLabel11.setBounds(190, 230, 100, 20);
 
+        jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel12.setText("Symptoms/Disease");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(221, 310, 110, 16);
+        jLabel12.setBounds(180, 280, 150, 20);
 
+        jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel13.setText("Gender");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(700, 110, 60, 16);
+        jLabel13.setBounds(660, 120, 70, 17);
 
+        jLabel14.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel14.setText("Breed");
         jPanel1.add(jLabel14);
-        jLabel14.setBounds(700, 160, 40, 30);
+        jLabel14.setBounds(660, 160, 60, 40);
 
+        jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel15.setText("Purpose of visit");
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(680, 230, 100, 16);
+        jLabel15.setBounds(650, 220, 100, 17);
 
+        jLabel16.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel16.setText("Appointment date");
         jPanel1.add(jLabel16);
-        jLabel16.setBounds(670, 290, 110, 16);
+        jLabel16.setBounds(640, 270, 130, 20);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(180, 50, 970, 320);
+        jLabel3.setBounds(70, 50, 1060, 320);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, -30, 1260, 780);
@@ -186,7 +317,17 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
     }// </editor-fold>//GEN-END:initComponents
 
     private void submit(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submit
-      if(name.getText().isEmpty()){
+         String regex = "^(?=.{1,64}@)[\\p{L}0-9_-]+(\\.[\\p{L}0-9_-]+)*@" 
+        + "[^-][\\p{L}0-9-]+(\\.[\\p{L}0-9-]+)*(\\.[\\p{L}]{2,})$";
+         Pattern pattern = Pattern.compile(regex); 
+        Matcher matcher = pattern.matcher(mail.getText());
+        
+         String phoneRE = "[0-9]+";
+         Pattern phonePattern = Pattern.compile(phoneRE);
+          Matcher phoneMatcher = phonePattern.matcher(phoneno.getText()); 
+        
+        
+        if(name.getText().isEmpty()){
              JOptionPane.showMessageDialog(rootPane,"Name cannot be empty");
         }else if(dob.getDate()==null){
             JOptionPane.showMessageDialog(rootPane,"Choose date of birth");
@@ -201,13 +342,19 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
         }else if(purr.getText().isEmpty()){
             JOptionPane.showMessageDialog(rootPane,"Enter purpose of your visit");
         }else if(sym.getText().isEmpty()){
-            JOptionPane.showMessageDialog(rootPane,"Cannot be empty, enter NO if required");
+            JOptionPane.showMessageDialog(rootPane,"Cannot be empty, enter NONE if required");
         }else if(oname.getText().isEmpty()){
             JOptionPane.showMessageDialog(rootPane,"Enter your name"); 
         }else if(phoneno.getText().isEmpty()){
-            JOptionPane.showMessageDialog(rootPane,"Enter contacy information"); 
+            JOptionPane.showMessageDialog(rootPane,"Enter contact information");
+        }else if(phoneMatcher.matches()==false){
+            JOptionPane.showMessageDialog(rootPane,"Enter digits for Phone No."); 
+        } else if(phoneno.getText().length()!=10){
+            JOptionPane.showMessageDialog(rootPane,"Enter valid phone number");
         }else if(mail.getText().isEmpty()){
             JOptionPane.showMessageDialog(rootPane,"Email cannot be empty"); 
+        }else if(matcher.matches()== false){
+            JOptionPane.showMessageDialog(rootPane,"Enter VALID Email");
         }else if(add.getText().isEmpty()){
             JOptionPane.showMessageDialog(rootPane,"Address cannot be empty"); 
         }else{

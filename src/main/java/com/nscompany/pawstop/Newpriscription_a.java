@@ -4,6 +4,8 @@
  */
 package com.nscompany.pawstop;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -22,6 +24,29 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI uii=(BasicInternalFrameUI)this.getUI();
         uii.setNorthPane(null);
+        
+     name.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && name.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
+      dis.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyTyped(KeyEvent e) {
+       
+        char c = e.getKeyChar();       
+        if (c == ' ' && dis.getText().isEmpty()) {
+            
+            e.consume();
+        }
+    }
+});
     }
 
     /**
@@ -37,13 +62,12 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
         jScrollPane1 = new javax.swing.JScrollPane();
         pres = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         dis = new javax.swing.JTextField();
         submit = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setBorder(null);
         setMaximumSize(new java.awt.Dimension(1150, 734));
@@ -57,37 +81,30 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
         jPanel2.setLayout(null);
 
         pres.setColumns(20);
+        pres.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         pres.setRows(5);
         jScrollPane1.setViewportView(pres);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(260, 70, 720, 490);
+        jScrollPane1.setBounds(320, 70, 720, 490);
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(52, 139, 227));
         jLabel3.setText("Prescription");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(10, 40, 150, 40);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(204, 17, 946, 320);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(434, 355, 716, 320);
+        jLabel3.setBounds(170, 10, 150, 40);
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel4.setText("Prescribed to");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(10, 120, 100, 30);
+        jLabel4.setBounds(30, 120, 100, 30);
         jPanel2.add(name);
-        name.setBounds(110, 120, 140, 30);
+        name.setBounds(130, 120, 170, 30);
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel5.setText("Disease");
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(20, 180, 60, 20);
+        jLabel5.setBounds(30, 190, 70, 20);
 
         dis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,8 +112,11 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
             }
         });
         jPanel2.add(dis);
-        dis.setBounds(110, 180, 140, 30);
+        dis.setBounds(130, 180, 170, 30);
 
+        submit.setBackground(new java.awt.Color(102, 204, 255));
+        submit.setFont(new java.awt.Font("Nirmala UI", 1, 14)); // NOI18N
+        submit.setForeground(new java.awt.Color(255, 255, 255));
         submit.setText("SUBMIT");
         submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,7 +124,12 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
             }
         });
         jPanel2.add(submit);
-        submit.setBounds(265, 572, 150, 40);
+        submit.setBounds(580, 570, 230, 40);
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jj.png"))); // NOI18N
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(10, 30, 1110, 610);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,7 +185,6 @@ ConnectionClass cn1=new ConnectionClass.getInstance();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField dis;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

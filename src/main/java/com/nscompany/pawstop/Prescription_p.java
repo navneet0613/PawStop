@@ -36,11 +36,11 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1380, 775));
@@ -51,6 +51,18 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
         jPanel1.setMinimumSize(new java.awt.Dimension(1380, 775));
         jPanel1.setPreferredSize(new java.awt.Dimension(1380, 775));
         jPanel1.setLayout(null);
+
+        jButton1.setBackground(new java.awt.Color(102, 204, 255));
+        jButton1.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("BACK");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(1170, 10, 120, 30);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -78,28 +90,23 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
             }
         });
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(30);
+        }
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(230, 130, 950, 440);
+        jScrollPane1.setBounds(210, 150, 970, 440);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jj.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(30, 30, 1051, 320);
+        jLabel1.setBounds(140, 60, 1230, 620);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Prescription");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(299, 390, 1051, 320);
-
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 204, 255));
-        jButton1.setText("BACK");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1);
-        jButton1.setBounds(1206, 30, 72, 23);
+        jLabel2.setBounds(270, 40, 180, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

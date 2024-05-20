@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
  * @author Lenovo
  */
 public class list_a extends javax.swing.JInternalFrame {
-ArrayList<Prescription> list = new ArrayList<Prescription>();
+ArrayList<petdetails> list = new ArrayList<petdetails>();
     /**
      * Creates new form list_a
      */
@@ -40,11 +40,10 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setBorder(null);
         setMaximumSize(new java.awt.Dimension(1150, 734));
@@ -57,38 +56,45 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
         jPanel1.setPreferredSize(new java.awt.Dimension(1150, 734));
         jPanel1.setLayout(null);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Title 1", "Title 2", "Title 3", "Title 4", "null", "null", "null", "null", "null", "null", "null", "null"
             }
-        ));
-        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTable1MouseClicked(evt);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jTable2.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(500, 120, 452, 402);
+        jPanel1.add(jScrollPane2);
+        jScrollPane2.setBounds(50, 110, 1040, 510);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jj.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(232, 29, 918, 320);
+        jLabel1.setBounds(20, 50, 1110, 600);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel2.setText("List of Patients ");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(375, 367, 769, 320);
-
-        jLabel3.setText("listtt off patientsss");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(76, 142, 96, 16);
+        jLabel2.setBounds(170, 20, 210, 50);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,14 +114,14 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
-       DefaultTableModel dtm = (DefaultTableModel) jTable1.getModel();
-        int selectedRow = jTable1.getSelectedRow();
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+DefaultTableModel dtm = (DefaultTableModel) jTable2.getModel();
+        int selectedRow = jTable2.getSelectedRow();
         
-        Prescription taskModel = new Prescription();
+        petdetails taskModel = new petdetails();
         int id = Integer.parseInt(dtm.getValueAt(selectedRow, 0).toString());
         
-        for (Prescription listElement: list) {
+        for (petdetails listElement: list) {
             if (listElement.getId() == id) {
                 taskModel = listElement;
                 break;
@@ -127,15 +133,15 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
     }
 
         private void getUsers() {
-        final String statement = "SELECT * from prescription";
+        final String statement = "SELECT * from petdetails";
         try {
             PreparedStatement preparedStatement = ConnectionClass.getInstance().connection.prepareStatement(statement);
 
             ResultSet resultSet = preparedStatement.executeQuery();
             
-            final String[] headerName = {"id","name","disease","prescription"};
+            final String[] headerName = {"id","name","gender","species","breed","dob","premed","symp","oname","phoneno","email","address"};
             DefaultTableModel tableModel = new DefaultTableModel(null, headerName);
-            jTable1.setModel(tableModel);
+            jTable2.setModel(tableModel);
            
 
 
@@ -143,41 +149,53 @@ ArrayList<Prescription> list = new ArrayList<Prescription>();
 
             while (resultSet.next()) {
                     
-                Prescription taskModel = new Prescription();
+                petdetails taskModel = new petdetails();
                 taskModel.setId(resultSet.getInt("id"));
                 taskModel.setName(resultSet.getString("name"));
-                taskModel.setDisease(resultSet.getString("disease"));
-                taskModel.setPrescription(resultSet.getString("prescription"));               
-                
+                taskModel.setGender(resultSet.getString("gender"));
+                taskModel.setSpecies(resultSet.getString("species")); 
+                taskModel.setBreed(resultSet.getString("breed"));
+                taskModel.setDob(resultSet.getString("dob"));
+                taskModel.setPremed(resultSet.getString("premed"));
+                taskModel.setSymp(resultSet.getString("symp"));
+                taskModel.setOname(resultSet.getString("oname"));
+                taskModel.setPhoneno(resultSet.getString("phoneno"));
+                taskModel.setEmail(resultSet.getString("email"));
+                taskModel.setAddress(resultSet.getString("address"));
                 
                 list.add(taskModel);
-                Object[] row = new Object[6];
+                Object[] row = new Object[12];
                 row[0] = taskModel.getId();
                 row[1] = taskModel.getName();
-                row[2] = taskModel.getDisease();
-                row[3] = taskModel.getPrescription();              
-                
+                row[2] = taskModel.getGender();
+                row[3] = taskModel.getSpecies();              
+                row[4] = taskModel.getBreed();  
+                row[5] = taskModel.getDob();  
+                row[6] = taskModel.getPremed();  
+                row[7] = taskModel.getSymp();  
+                row[8] = taskModel.getOname();  
+                row[9] = taskModel.getPhoneno();  
+                row[10] = taskModel.getEmail();  
+                row[11] = taskModel.getAddress();  
                 
                 tableModel.addRow(row);
             }
                 
-            for (Prescription taskModel: list) {
+            for (petdetails taskModel: list) {
                 System.out.println(taskModel.getId());
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(Prescription_p.class.getName()).log(Level.SEVERE, null, ex);
-        }
-   
-    }//GEN-LAST:event_jTable1MouseClicked
+            Logger.getLogger(list_a.class.getName()).log(Level.SEVERE, null, ex);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable2MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }

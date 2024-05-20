@@ -39,7 +39,6 @@ public class Contact_p extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,62 +56,63 @@ public class Contact_p extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("CONTACT US ");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(550, 70, 250, 50);
+        jLabel3.setBounds(550, 40, 250, 50);
 
-        jLabel4.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel4.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(52, 139, 227));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Address");
         jPanel1.add(jLabel4);
-        jLabel4.setBounds(400, 200, 100, 26);
+        jLabel4.setBounds(400, 170, 100, 27);
 
-        jLabel5.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel5.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(52, 139, 227));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Phone");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(400, 280, 80, 26);
+        jLabel5.setBounds(400, 270, 100, 26);
 
-        jLabel6.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel6.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(52, 139, 227));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Email");
         jPanel1.add(jLabel6);
-        jLabel6.setBounds(400, 380, 70, 26);
+        jLabel6.setBounds(400, 370, 100, 27);
 
-        jLabel7.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel7.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Social Media ");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(390, 460, 150, 26);
+        jLabel7.setBounds(380, 460, 150, 27);
 
-        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(102, 204, 255));
+        jLabel8.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(52, 139, 227));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Business hours");
         jPanel1.add(jLabel8);
-        jLabel8.setBounds(390, 590, 157, 26);
+        jLabel8.setBounds(380, 590, 160, 27);
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("123 Main Street City, State, Zip Code");
         jPanel1.add(jLabel9);
-        jLabel9.setBounds(570, 190, 270, 40);
+        jLabel9.setBounds(570, 160, 270, 40);
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel10.setText("(+91)7686376849");
         jPanel1.add(jLabel10);
-        jLabel10.setBounds(580, 290, 140, 20);
+        jLabel10.setBounds(580, 270, 140, 20);
 
         jLabel11.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel11.setText("pawstop@gmail.com");
         jPanel1.add(jLabel11);
-        jLabel11.setBounds(580, 380, 160, 17);
+        jLabel11.setBounds(590, 370, 160, 30);
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel12.setText("<html>[Facebook icon/link]<br> [Twitter icon/link] <br>[Instagram icon/link]<br> [LinkedIn icon/link]<br> [YouTube icon/link]</html>");
         jPanel1.add(jLabel12);
-        jLabel12.setBounds(580, 450, 270, 100);
+        jLabel12.setBounds(590, 450, 270, 100);
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel13.setText("<html>Monday - Friday: 9:00 AM - 5:00 PM<br> Saturday: 9:00 AM - 1:00 PM <br>Sunday: Closed</html>");
@@ -120,17 +120,13 @@ public class Contact_p extends javax.swing.JFrame {
         jLabel13.setBounds(580, 590, 240, 50);
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jj.png"))); // NOI18N
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(190, 60, 970, 320);
+        jLabel1.setBounds(130, 90, 1120, 640);
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(190, 380, 970, 320);
-
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 204, 255));
+        jButton1.setBackground(new java.awt.Color(102, 204, 255));
+        jButton1.setFont(new java.awt.Font("Nirmala UI", 1, 16)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("BACK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +134,7 @@ public class Contact_p extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(1220, 20, 75, 22);
+        jButton1.setBounds(1140, 20, 160, 30);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -207,7 +203,6 @@ public class Contact_p extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

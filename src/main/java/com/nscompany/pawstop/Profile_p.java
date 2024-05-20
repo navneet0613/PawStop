@@ -27,13 +27,33 @@ public class Profile_p extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1380, 775));
         setMinimumSize(new java.awt.Dimension(1380, 775));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -42,20 +62,9 @@ public class Profile_p extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1380, 775));
         jPanel1.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(30, 30, 1051, 320);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bb.png"))); // NOI18N
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(299, 389, 1051, 320);
-
-        jLabel3.setText("SHow the entered patient details here ");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(40, 380, 220, 20);
-
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 204, 255));
+        jButton1.setBackground(new java.awt.Color(102, 204, 255));
+        jButton1.setFont(new java.awt.Font("Nirmala UI", 1, 16)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("BACK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,7 +72,160 @@ public class Profile_p extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(1190, 40, 72, 23);
+        jButton1.setBounds(1140, 30, 160, 30);
+
+        jLabel3.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Pet's Name");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(480, 120, 130, 40);
+
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("PROFILE");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(590, 50, 160, 50);
+
+        jLabel4.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Gender");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(480, 180, 110, 30);
+
+        jLabel5.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Species");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(480, 230, 100, 40);
+
+        jLabel6.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("Breed");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(490, 280, 80, 40);
+
+        jLabel7.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("DOB");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(480, 340, 100, 30);
+
+        jLabel8.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Previous Medication");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(410, 380, 230, 40);
+
+        jLabel9.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Symptoms");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(460, 430, 150, 40);
+
+        jLabel10.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Owner's Name");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(440, 480, 170, 40);
+
+        jLabel11.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("Phone No.");
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(480, 530, 100, 50);
+
+        jLabel12.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("E-mail");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(480, 590, 110, 40);
+
+        jLabel13.setFont(new java.awt.Font("Nirmala UI", 1, 20)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(52, 139, 227));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setText("Address");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(480, 640, 100, 30);
+
+        jLabel14.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Cherry");
+        jPanel1.add(jLabel14);
+        jLabel14.setBounds(720, 130, 90, 30);
+
+        jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("Female");
+        jPanel1.add(jLabel15);
+        jLabel15.setBounds(730, 180, 80, 30);
+
+        jLabel16.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Rabbit");
+        jPanel1.add(jLabel16);
+        jLabel16.setBounds(730, 230, 80, 30);
+
+        jLabel17.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setText("Mini Rex");
+        jPanel1.add(jLabel17);
+        jLabel17.setBounds(730, 280, 80, 30);
+
+        jLabel18.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel18.setText("Thu Jan 11 2024");
+        jPanel1.add(jLabel18);
+        jLabel18.setBounds(710, 340, 130, 30);
+
+        jLabel19.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("No");
+        jPanel1.add(jLabel19);
+        jLabel19.setBounds(740, 380, 50, 30);
+
+        jLabel20.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel20.setText("none");
+        jPanel1.add(jLabel20);
+        jLabel20.setBounds(730, 430, 70, 30);
+
+        jLabel21.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("Ted");
+        jPanel1.add(jLabel21);
+        jLabel21.setBounds(730, 480, 70, 40);
+
+        jLabel22.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel22.setText("8947382456");
+        jPanel1.add(jLabel22);
+        jLabel22.setBounds(700, 540, 130, 30);
+
+        jLabel23.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel23.setText(" ted123@gmail.com");
+        jPanel1.add(jLabel23);
+        jLabel23.setBounds(700, 590, 190, 30);
+
+        jLabel24.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("ABC,Town,City");
+        jPanel1.add(jLabel24);
+        jLabel24.setBounds(690, 640, 140, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jj.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(130, 90, 1170, 620);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -129,8 +291,29 @@ public class Profile_p extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
